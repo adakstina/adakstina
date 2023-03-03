@@ -12,38 +12,62 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     </head>
     
     <body>
-        <div class="w3-top">
-  
-    <a href="sākums" >Sākums</a>
-    <a href="saraksts" >Saraksts</a>
-    <a href="teksts" >Teksts</a>
-    <a href="attēls" >Attēls</a>
-       </div>
+       <button class="tablink" onclick="openPage('Sakums', this, 'pink')">Sakums</button>
+<button class="tablink" onclick="openPage('Saraksts',this, 'pink')" id="defaultOpen">Saraksts</button>
+<button class="tablink" onclick="openPage('Teksts',this, 'pink')">Teksts</button>
+<button class="tablink" onclick="openPage('Attels',this, 'pink')">Attels</button>
         
-            <div id="sākums"">
+            <div id="Sakums" class="tabcontent">
                 
             
         <h1> Datortīklu<span style="color:red"> veidi</span></h1>
         </div>
-        <div id="saraksts"
+        <div id="Saraksts" class="tabcontent">
         <p>Atkarībā no datoru teritoriālā izvietojuma datortīklus var iedalīt:</p>
       
         
         <ul>
             <li>Lokālajos datortīklos</li> 
             <li>Teritoriālajos tīklos</li>
-    </div>
+    
         </ul>
-        <div class="teksts"
+        </div>
+        <div id="Teksts" class="tabcontent">
         <p>(Local Area Network - LAN) nodrošina sakarus starp datoriem nelielos attālumos. Šie datori visbiežāk atrodas vienā telpā vai vienā ēkā.</p>
         <p>Apvienojot vairākus lokālos datortīklus, veidojas teritoriālie tīkli (Wide Area Network - WAN), kas var aptvert pat vairākas valstis.</p>
         <p>Phasellus ut magna fringilla semper integer augue. Vehicula porttitor, lobortis sed taciti ligula quam vel. Viverra blandit nunc imperdiet parturient sem ullamcorper. Fames consequat donec maecenas sociis phasellus senectus purus ultrices, dignissim libero! Sociosqu varius arcu curabitur blandit cubilia porta interdum eros quam curae; urna praesent! Non ligula auctor ac a, et vestibulum auctor platea dapibus justo eu ridiculus. Nisi rhoncus convallis morbi at vehicula maecenas integer ligula volutpat. Mus senectus tellus placerat neque leo laoreet ut potenti? Elementum et praesent cum viverra.
 
-Rhoncus habitant taciti primis. Cursus nibh nostra fermentum pulvinar mauris volutpat in, suspendisse per. Pretium donec lobortis, platea blandit adipiscing fames tristique etiam in. Id posuere facilisis mi inceptos libero hac libero pretium eget nostra consectetur rutrum. Adipiscing, nisi dui nascetur. Sodales mauris class viverra. Augue pharetra dictumst sollicitudin dis. Turpis elementum, platea ac. Cum velit feugiat et curabitur diam sagittis ligula sagittis, parturient urna maecenas! Ridiculus ullamcorper suspendisse venenatis. Phasellus donec est diam in fringilla pulvinar, pharetra vulputate. Ultrices vulputate vivamus, hendrerit tellus.
-        </div>
+Rhoncus habitant taciti primis. Cursus nibh nostra fermentum pulvinar mauris volutpat in, suspendisse per. Pretium donec lobortis, platea blandit adipiscing fames tristique etiam in. Id posuere facilisis mi inceptos libero hac libero pretium eget nostra consectetur rutrum. Adipiscing, nisi dui nascetur. Sodales mauris class viverra. Augue pharetra dictumst sollicitudin dis. Turpis elementum, platea ac. Cum velit feugiat et curabitur diam sagittis ligula sagittis, parturient urna maecenas! Ridiculus ullamcorper suspendisse venenatis. Phasellus donec est diam in fringilla pulvinar, pharetra vulputate. Ultrices vulputate vivamus, hendrerit tellus.Sociis natoque gravida vehicula viverra. Sociis tempus suscipit duis. Lobortis ullamcorper placerat; molestie hendrerit arcu lacinia justo lacinia bibendum primis commodo ad. Ultrices porta cursus vel imperdiet quis egestas himenaeos. Ac commodo sodales pharetra lacinia. Arcu ullamcorper est massa montes donec odio urna dolor bibendum mauris! Fringilla integer vivamus mollis viverra morbi etiam porttitor. Nisi porta euismod urna dolor.
+
+Nulla euismod commodo integer ligula, feugiat porta rhoncus congue rutrum volutpat sapien. Auctor interdum ultrices ultrices ultricies dignissim, blandit scelerisque sociis imperdiet dictumst cubilia. Posuere class consequat, suspendisse condimentum commodo primis platea eros. A blandit ut dolor libero semper aliquet. Torquent primis platea dictum curae; convallis rhoncus curae; sagittis dictumst maecenas? Rhoncus sociis nullam praesent porta quisque et placerat porta taciti laoreet suscipit. Litora sociis enim cubilia, at platea est est. Sapien blandit nascetur natoque pretium lectus ut mus ac sagittis curae; mauris. Taciti eleifend penatibus varius pellentesque varius nostra neque. Egestas lacus.
+
+Fusce eget elementum ac vehicula ipsum nostra! Erat eros ornare sed sociis pellentesque consequat platea malesuada et. Per et magna sociosqu nisi nibh curabitur nisl montes risus! Leo dolor elit scelerisque cum litora integer tempor netus mollis orci nam fames. Porttitor nullam sem massa. Commodo aliquam, vivamus faucibus netus dolor. Eu quisque mauris.
+
+        
         </p>
         <a href="https://enciklopedija.lv/skirklis/1767">Vairāk informācijas</a>
-        <div class="attēls"</div>
-        <img src="images/dators1.png" style="width:100px;height:100px;">
+        </div>
+        <div id="Attels" class="tabcontent">
+        <img src="images/dators1.png" style="width:450px;height:400px;">
+        </div>
     </body>
+    <script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
 </html>
